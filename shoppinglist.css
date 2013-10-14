@@ -1,0 +1,130 @@
+* {
+	margin: 0;
+}
+
+#wrapper {
+	max-width: 700px;
+	min-width: 320px;
+	margin: 0 auto;
+	background-color: #fff;
+	border: 1px solid #ebebeb;
+}
+
+.headline {
+	font-family: Verdana, sans-serif;
+	text-align: center;
+	background-color: #000;
+	font-size: 40px;
+	padding: 30px;
+	color: Orange;
+}
+
+.instructions {
+	padding: 20px;
+	font-family: Arial, sans-serif;
+	font-size: 18px;
+	font-style: italic;
+	text-align: center;
+}
+
+#input-section {
+	padding: 20px;
+
+}
+
+#enter-item {
+	width: 70%;
+	font-size: 24px;
+	border: 1px solid Orange;
+	padding: 10px;
+	vertical-align: bottom;
+}
+input[type="text"]:focus {
+	outline: 1px solid Orange;
+}
+
+#add-item {
+
+
+	font-size: 24px;
+	padding: 10px 10px;
+	display: inline-block;
+	position: relative;
+	background-color: Orange;
+	border: 1px solid Orange;
+	font-family: Arial, sans-serif;
+
+	vertical-align: middle;
+}
+
+#warning {
+	color: Red;
+	padding-left: 20px;
+}
+
+#add-item:focus {
+	outline: 1px solid Orange;
+}
+
+#items {
+	font-family: Arial, sans-serif;
+	font-size: 24px;
+	background-color: #fff;
+
+}
+
+.added {
+	line-height: 50px;
+	list-style-type: none;
+
+	background-image: url("images/circle.png");
+	background-repeat: no-repeat;
+	background-position: 20px 9px;
+	padding-left: 60px;
+
+	height: 50px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.selected {
+	line-height: 50px;
+	list-style-type: none;
+
+	position: relative;
+
+	background-image: url("images/check.png");
+	background-repeat: no-repeat;
+	background-position: 20px 9px;
+	background-color: #ebebeb;
+	padding-right: 150px;
+
+	height: 50px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+
+	padding-left: 60px;
+}
+
+.delete-item {
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 50px;
+	line-height: 50px;
+	width: 80px;
+	padding-left: 50px;
+
+	width: 80px;
+
+	font-size: 20px;
+	color: #fff;
+
+	background-image: url("images/delete.png");
+	background-repeat: no-repeat;
+	background-position: 10px 9px;
+	background-color: #000;
+}
