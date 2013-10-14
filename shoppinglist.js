@@ -19,9 +19,8 @@ function addItem() {
 
 		//select added
 		$(".added").click(function() {
-			$(this).removeClass("added").addClass("selected");
-
-			
+			$(this).removeClass("added").addClass("selected");	
+						
 
 		//delete selected
 		$( "<span class='delete-item'>Delete</span>" ).appendTo( ".selected" ).click(function () {
@@ -35,3 +34,11 @@ function addItem() {
 
 document.getElementById("add-item").addEventListener("click", validateForm, false);
 
+$('#enter-item').keypress(function (e)
+{
+    if(e.keyCode==13)
+    {
+        validateForm();
+        document.getElementById("enter-item").value = "";
+    }
+});
