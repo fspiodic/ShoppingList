@@ -16,29 +16,50 @@ function addItem() {
 	paragraph.className = "added";
 	newItem = document.getElementById("items").appendChild(paragraph);
 	newItem.innerHTML = userEntry;
+	$('#items  p:last-child').append("<span class='delete-item' style='display:none;'>Delete</span>");
 
-		//select added
-		$(".added").click(function() {
-			$(this).removeClass("added").addClass("selected");	
-						
-
-		//delete selected
-		$( "<span class='delete-item'>Delete</span>" ).appendTo( ".selected" ).click(function () {
-			$(this).parent().fadeOut(100);
-		});
-
-		});
-	
 }
+
 
 
 document.getElementById("add-item").addEventListener("click", validateForm, false);
 
-$('#enter-item').keypress(function (e)
-{
-    if(e.keyCode==13)
-    {
-        validateForm();
-        document.getElementById("enter-item").value = "";
-    }
-});
+
+		//"Enter" Key Assigned
+		$('#enter-item').keypress(function (e)
+		{
+		    if(e.keyCode==13)
+		    {
+		        validateForm();
+		        document.getElementById("enter-item").value = "";
+		    }
+		});
+
+
+		//select added
+		$("#items").on('click', 'p', function() {
+			$(this).toggleClass("added").toggleClass("selected");
+			$(this).find('.delete-item').toggle();	
+	
+		});
+		
+		//delete selected
+		$("#items").on('click', '.delete-item', function() {
+			$(this).parent().fadeOut(100);
+		});
+
+		//select all
+		$("#select-all").click(function() {
+			$("#items p").toggleClass("added").toggleClass("selected");
+			$("#items p").find('.delete-item').toggle();	
+	
+		});
+
+
+
+		//delete all
+		$("#clear-all").click(function() {
+			$("#items p").fadeOut(100);
+		});
+
+	

@@ -128,3 +128,49 @@ input[type="text"]:focus {
 	background-position: 10px 9px;
 	background-color: #000;
 }
+
+#select-clear {
+	text-align: center;
+	padding: 20px;
+	}
+
+#select-all {
+	font-size: 18px;
+	font-weight: lighter;
+	padding: 10px 10px;
+	display: inline-block;
+	position: relative;
+	background-color: Orange;
+	border: 1px solid Orange;
+	font-family: Arial, sans-serif;
+	color: #fff;
+	margin: 10px;
+
+	vertical-align: middle;
+}
+#select-all:focus {
+	outline: 1px solid Orange;
+	}
+
+#clear-all {
+	font-size: 18px;
+	font-weight: lighter;
+	padding: 10px 10px;
+	display: inline-block;
+	position: relative;
+	background-color: Orange;
+	border: 1px solid Orange;
+	font-family: Arial, sans-serif;
+	color: #fff;
+	margin: 10px;
+
+	vertical-align: middle;
+}
+#clear-all:focus {
+	outline: 1px solid Orange;
+	}
+
+
+
+
+
